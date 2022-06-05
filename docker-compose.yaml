@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+  teknasyon-nodejs-challange:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - teknasyon-nodejs-challange-data:/data/db
+volumes:
+  teknasyon-nodejs-challange-data:
